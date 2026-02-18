@@ -28,6 +28,11 @@
   <body class="bg-gray-900 text-gray-100">
     <main class="p-6 md:p-10 max-w-5xl mx-auto">
 
+      <!-- Project Title -->
+      <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        <span class="text-emerald-400">Data Warehouse Migration</span>
+      </h1>
+
       <!-- Overview Image -->
       <div class="w-full flex justify-center mb-12">
         <img
@@ -64,10 +69,19 @@
         </h2>
 
         <!-- Bronze Layer -->
-        <div class="bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-6 mb-10">
-          <h3 class="font-semibold text-white mb-3">
+        <div class="bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8 mb-10">
+          <h3 class="font-semibold text-white mb-4">
             1. Bronze Layer (Raw Data Ingestion & Standardization)
           </h3>
+
+          <!-- Image for Bronze Layer -->
+          <div class="w-full flex justify-center mb-6">
+            <img
+              src="../gambar/etl1.png"
+              alt="Bronze Layer Diagram"
+              class="rounded-lg shadow-md w-full max-w-3xl"
+            />
+          </div>
 
           <!-- Bronze Layer Description -->
           <p>
@@ -81,33 +95,17 @@
             </span>
             to support and streamline the ETL workflow.
           </p>
-            <!-- Image for Bronze Layer -->
-            <div class="w-full flex justify-center mb-4">
-            <img
-              src="../gambar/etl1.png"
-              alt="Bronze Layer Diagram"
-              class="rounded-lg shadow-md w-full max-w-3xl"
-              />
-            </div>
 
           <!-- Data Extraction -->
-          <p class="mt-4 text-emerald-400 font-medium">Data Extraction</p>
+          <p class="mt-6 text-emerald-400 font-medium">Data Extraction</p>
           <ul class="list-disc ml-6 mt-2">
             <li>Relational databases (MySQL, PostgreSQL, internal systems)</li>
             <li>CSV files with varying sizes (small to large datasets)</li>
             <li>Periodically generated exports from internal applications</li>
           </ul>
-          <p class="mt-2">
-            The extraction workflow supported both incremental and full data
-            loads depending on dataset characteristics.
-          </p>
 
           <!-- Schema Alignment -->
           <p class="mt-6 text-emerald-400 font-medium">Schema & Data Type Alignment</p>
-          <p>
-            Before loading the data into GCS or BigQuery, I performed schema
-            alignment processes such as:
-          </p>
           <ul class="list-disc ml-6 mt-2">
             <li>Standardizing column names</li>
             <li>Converting data types (string → int64, float → numeric, text → timestamp)</li>
@@ -115,13 +113,9 @@
             <li>Fixing encoding issues</li>
             <li>Standardizing delimiters and field lengths</li>
           </ul>
-          <p class="mt-2">
-            These steps prevented schema conflicts and reduced transformation errors in the Silver Layer.
-          </p>
 
           <!-- Validation -->
           <p class="mt-6 text-emerald-400 font-medium">Structural & Integrity Validation</p>
-          <p>I implemented automated validation steps including:</p>
           <ul class="list-disc ml-6 mt-2">
             <li>Column count validation</li>
             <li>Data type verification</li>
@@ -130,98 +124,81 @@
             <li>Timestamp consistency checks</li>
             <li>Basic referential validation between related datasets</li>
           </ul>
-          <p class="mt-2">
-            When anomalies were detected, the pipeline automatically generated notifications.
-          </p>
 
           <!-- Loading -->
           <p class="mt-6 text-emerald-400 font-medium">Loading into GCS & BigQuery</p>
-          <p>After validation, data was loaded into:</p>
           <ul class="list-disc ml-6 mt-2">
             <li>Google Cloud Storage (GCS) as raw staging files</li>
             <li>BigQuery Bronze Tables</li>
-          </ul>
-          <p class="mt-3">Loading strategy included:</p>
-          <ul class="list-disc ml-6 mt-2">
-            <li>Append mode</li>
-            <li>Replace mode</li>
+            <li>Append and Replace modes</li>
             <li>Partitioning by date or timestamp</li>
             <li>Clustering on frequently queried columns</li>
           </ul>
-          <p class="mt-2">
+
+          <p class="mt-4">
             The Bronze Layer ensures stable, structured datasets ready for downstream processing in the Silver Layer.
           </p>
         </div>
 
-    </section>
-  </main>
-</body>
-</html>
+        <!-- Silver Layer -->
+        <div class="bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8 mb-10">
+          <h3 class="font-semibold text-white mb-4">
+            2. Silver Layer (Cleaned & Transformed Data)
+          </h3>
 
-<!-- Silver Layer -->
-<div class="bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8 mt-10">
-  <h3 class="font-semibold text-white mb-4">
-    2. Silver Layer (Cleaned & Transformed Data)
-  </h3>
+          <!-- Image for Silver Layer -->
+          <div class="w-full flex justify-center mb-6">
+            <img
+              src="../gambar/Sumber httpsdeveloper.chrome.comdocscruxguidesbigqueryhl=id.png"
+              alt="Silver Layer Diagram"
+              class="rounded-lg shadow-md w-full max-w-3xl"
+            />
+          </div>
 
-  <!-- Silver Layer Image -->
-  <div class="w-full flex justify-center mb-6">
-    <img
-      src="../gambar/silver_layer.png"
-      alt="Silver Layer Diagram"
-      class="rounded-xl shadow-lg w-full max-w-4xl"
-    />
-  </div>
+          <!-- Silver Layer Description -->
+          <p>
+            In the Silver Layer, I focused on <strong>cleaning, transforming, and enriching</strong> the raw data from the Bronze Layer to make it analysis-ready.
+            This includes standardizing formats, applying business rules, and creating derived fields for reporting and analytics.
+            All transformations were implemented using
+            <span class="text-white font-semibold">
+              Talend Real-Time Big Data Platform and BigQuery
+            </span>
+            to ensure efficiency and scalability.
+          </p>
 
-  <!-- Silver Layer Description -->
-  <p class="text-gray-300 leading-relaxed">
-    In the Silver Layer, I focused on <span class="text-white font-semibold">cleaning, transforming, and enriching</span> 
-    the raw data from the Bronze Layer to make it analysis-ready. This includes standardizing formats, 
-    applying business rules, and creating derived fields for reporting and analytics. 
-    All transformations were implemented using <span class="text-white font-semibold">Talend Real-Time Big Data Platform and BigQuery</span>.
-  </p>
+          <!-- Data Transformation -->
+          <p class="mt-6 text-emerald-400 font-medium">Data Transformation</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Applying business rules and data enrichment</li>
+            <li>Calculating derived metrics and KPIs</li>
+            <li>Standardizing categorical values and formats</li>
+            <li>Handling nulls, missing values, and inconsistencies</li>
+          </ul>
 
-  <!-- Data Transformation -->
-  <p class="mt-6 text-emerald-400 font-medium">Data Transformation</p>
-  <ul class="list-disc ml-6 mt-2 text-gray-300 leading-relaxed">
-    <li>Applying business rules and data enrichment</li>
-    <li>Calculating derived metrics and KPIs</li>
-    <li>Standardizing categorical values and formats</li>
-    <li>Handling nulls, missing values, and inconsistencies</li>
-  </ul>
+          <!-- Data Validation -->
+          <p class="mt-6 text-emerald-400 font-medium">Validation & Quality Checks</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Checking referential integrity between related datasets</li>
+            <li>Ensuring consistency with Bronze Layer source data</li>
+            <li>Automated alerts for anomalies or unexpected values</li>
+            <li>Performance checks for query efficiency</li>
+          </ul>
 
-  <!-- Data Validation -->
-  <p class="mt-6 text-emerald-400 font-medium">Validation & Quality Checks</p>
-  <ul class="list-disc ml-6 mt-2 text-gray-300 leading-relaxed">
-    <li>Checking referential integrity between related datasets</li>
-    <li>Ensuring consistency with Bronze Layer source data</li>
-    <li>Automated alerts for anomalies or unexpected values</li>
-    <li>Performance checks for query efficiency</li>
-  </ul>
+          <!-- Loading to Silver Tables -->
+          <p class="mt-6 text-emerald-400 font-medium">Loading into Silver Tables</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>BigQuery Silver Tables for cleaned and transformed data</li>
+            <li>Partitioning by date or timestamp for query optimization</li>
+            <li>Clustering on frequently accessed columns</li>
+            <li>Incremental and full-load strategies depending on dataset</li>
+          </ul>
 
-  <!-- Loading to Silver Tables -->
-  <p class="mt-6 text-emerald-400 font-medium">Loading into Silver Tables</p>
-  <ul class="list-disc ml-6 mt-2 text-gray-300 leading-relaxed">
-    <li>BigQuery Silver Tables for cleaned and transformed data</li>
-    <li>Partitioning by date or timestamp for query optimization</li>
-    <li>Clustering on frequently accessed columns</li>
-    <li>Incremental and full-load strategies depending on dataset</li>
-  </ul>
-
-  <p class="mt-4 text-gray-300 leading-relaxed">
-    The Silver Layer ensures that data is <span class="text-white font-semibold">accurate, consistent, and enriched</span>, 
-    ready for downstream analytics, dashboards, and reporting in the Gold Layer.
-  </p>
-</div>
+          <p class="mt-4">
+            The Silver Layer ensures that data is <strong>accurate, consistent, and enriched</strong>, ready for downstream analytics, dashboards, and reporting in the Gold Layer.
+          </p>
+        </div>
 
       </section>
     </main>
   </body>
 </html>
-
-
-
-
-
-
-
