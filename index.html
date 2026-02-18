@@ -67,180 +67,123 @@
         </nav>
       </aside>
       
-      <main class="flex-1 px-6 md:px-10 pb-10 space-y-4 overflow-y-auto">
+      <main class="flex-1 px-6 md:px-10 pt-6 pb-10 space-y-4 overflow-y-auto">
 
-  <!-- About -->
-  <section id="about-section" class="content-section">
-    <div class="bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8">
+<!-- About -->
+<section id="about-section" class="content-section">
+  <!-- About Me -->
+  <div class="bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8">
+    <h1 class="text-2xl font-bold mb-4 text-white">About Me</h1>
+    <p class="text-gray-300 leading-relaxed text-justify text-lg">
+      I specialize in Data Engineering, Web Development, and UI/UX
+      Design, combining technical expertise and creative thinking to
+      deliver data-driven systems and user-centered applications.
+      I design scalable solutions, build reliable platforms, and craft
+      intuitive experiences that create real impact.
+    </p>
+  </div>
 
-      <h1 class="text-2xl font-bold mb-4 text-white">
-        About Me
-      </h1>
+  <!-- Technical Skills -->
+  <div class="mt-8 bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8">
+    <h3 class="text-2xl font-bold mb-8 text-white text-center md:text-left">
+      Technical Skills
+    </h3>
 
-      <p class="text-gray-300 leading-relaxed text-justify text-lg">
-        I specialize in Data Engineering, Web Development, and UI/UX
-        Design, combining technical expertise and creative thinking to
-        deliver data-driven systems and user-centered applications.
-        I design scalable solutions, build reliable platforms, and craft
-        intuitive experiences that create real impact.
-      </p>
-    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Data Engineering -->
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
+        <h4 class="text-white font-medium text-lg mb-3">Data Engineering</h4>
+        <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
+          <li>Build ETL pipelines to ingest and integrate data from multiple structured and semi-structured sources</li>
+          <li>Clean, transform, and standardize raw data into reliable, analysis-ready datasets</li>
+          <li>Design layered data architectures (Bronze–Silver) for scalable and maintainable workflows</li>
+          <li>Develop analytical tables and optimized queries to support reporting and dashboards</li>
+          <li>Apply data validation, filtering, and quality checks to ensure accuracy and consistency</li>
+          <li>Automate data workflows and monitor pipeline performance for reliability</li>
+        </ul>
+      </div>
 
-          <div
-            class="mt-8 bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8"
-          >
-            <h3
-              class="text-2xl font-bold mb-8 text-white text-center md:text-left"
-            >
-              Technical Skills
-            </h3>
+      <!-- Web Developer -->
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
+        <h4 class="text-lg font-semibold text-white mb-3">Web Developer</h4>
+        <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
+          <li>Build responsive and interactive web interfaces using HTML, CSS, Tailwind CSS, and JavaScript</li>
+          <li>Develop dynamic backends using PHP with modular, maintainable architecture</li>
+          <li>Integrate forms with backend and database for data processing and storage</li>
+          <li>Manage relational databases (MySQL/PostgreSQL) including queries, relationships, and performance optimization</li>
+          <li>Implement CRUD systems, input validation, and business logic in web applications</li>
+          <li>Use Git and GitHub for version control and application deployment</li>
+        </ul>
+      </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
-                <h4 class="text-white font-medium text-lg mb-3">
-                  Data Engineering
-                </h4>
-                <ul
-                  class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed"
-                >
-                  <li>
-                    Build ETL pipelines to ingest and integrate data from
-                    multiple structured and semi-structured sources
-                  </li>
-                  <li>
-                    Clean, transform, and standardize raw data into reliable,
-                    analysis-ready datasets
-                  </li>
-                  <li>
-                    Design layered data architectures (Bronze–Silver) for
-                    scalable and maintainable workflows
-                  </li>
-                  <li>
-                    Develop analytical tables and optimized queries to support
-                    reporting and dashboards
-                  </li>
-                  <li>
-                    Apply data validation, filtering, and quality checks to
-                    ensure accuracy and consistency
-                  </li>
-                  <li>
-                    Automate data workflows and monitor pipeline performance
-                    for reliability
-                  </li>
-                </ul>
-              </div>
-
-              <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
-                <h4 class="text-lg font-semibold text-white mb-3">
-                  Web Developer
-                </h4>
-                <ul
-                  class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed"
-                >
-                  <li>
-                    Build responsive and interactive web interfaces using HTML,
-                    CSS, Tailwind CSS, and JavaScript
-                  </li>
-                  <li>
-                    Develop dynamic backends using PHP with modular, maintainable
-                    architecture
-                  </li>
-                  <li>
-                    Integrate forms with backend and database for data processing
-                    and storage
-                  </li>
-                  <li>
-                    Manage relational databases (MySQL/PostgreSQL) including
-                    queries, relationships, and performance optimization
-                  </li>
-                  <li>
-                    Implement CRUD systems, input validation, and business logic
-                    in web applications
-                  </li>
-                  <li>
-                    Use Git and GitHub for version control and application
-                    deployment
-                  </li>
-                </ul>
-              </div>
-
-              <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
-                <h4 class="text-lg font-semibold text-white mb-3">
-                  UI/UX Design
-                </h4>
-                <ul
-                  class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed"
-                >
-                  <li>Conduct user research to understand problems and user behavior</li>
-                  <li>Create wireframes, user flows, and information structures for effective experience design</li>
-                  <li>Design modern, responsive, and user-friendly interfaces with focus on usability</li>
-                  <li>Develop interactive prototypes for concept validation and user flow testing</li>
-                  <li>Apply visual design principles such as typography, color, and layout consistency</li>
-                  <li>Use Figma and Canva for design, prototyping, and creating visual assets</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <div
-<div class="mt-8 bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8">
-  <h3 class="text-2xl font-bold mb-8 text-white text-center md:text-left">
-    Tools Skills
-  </h3>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Data Engineering -->
-    <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
-      <h4 class="text-white font-medium text-lg mb-3">
-        Data Engineering
-      </h4>
-      <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
-        <li>Talend Real-Time Big Data Studio</li>
-        <li>Big Query</li>
-        <li>Impala</li>
-        <li>MySQL</li>
-        <li>Talend Data Catalog</li>
-        <li>PostgreSQL</li>
-        <li>DBeaver</li>
-        <li>Microsoft Excel</li>
-      </ul>
-    </div>
-
-    <!-- Web Developer -->
-    <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
-      <h4 class="text-lg font-semibold text-white mb-3">
-        Web Developer
-      </h4>
-      <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
-        <li>HTML, CSS, JavaScript, Tailwind CSS</li>
-        <li>PHP with modular, maintainable architecture</li>
-        <li>MySQL / PostgreSQL database management</li>
-        <li>CRUD systems & backend integration</li>
-        <li>Git & GitHub version control</li>
-        <li>Visual Studio Code, VS Code Extensions (Prettier, Tailwind IntelliSense)</li>
-      </ul>
-    </div>
-
-    <!-- UI/UX Design -->
-    <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
-      <h4 class="text-lg font-semibold text-white mb-3">
-        UI/UX Design
-      </h4>
-      <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
-        <li>Figma for wireframing & prototyping</li>
-        <li>Canva for visual asset creation</li>
-        <li>Adobe Illustrator for UI design</li>
-        <li>User research & usability testing</li>
-        <li>Creating user flows, wireframes, and information architecture</li>
-        <li>Design systems & component libraries</li>
-        <li>Interactive prototyping (Figma)</li>
-        <li>Accessibility & responsive design testing</li>
-      </ul>
+      <!-- UI/UX Design -->
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
+        <h4 class="text-lg font-semibold text-white mb-3">UI/UX Design</h4>
+        <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
+          <li>Conduct user research to understand problems and user behavior</li>
+          <li>Create wireframes, user flows, and information structures for effective experience design</li>
+          <li>Design modern, responsive, and user-friendly interfaces with focus on usability</li>
+          <li>Develop interactive prototypes for concept validation and user flow testing</li>
+          <li>Apply visual design principles such as typography, color, and layout consistency</li>
+          <li>Use Figma and Canva for design, prototyping, and creating visual assets</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-        </section>
+
+  <!-- Tools Skills -->
+  <div class="mt-8 bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-8">
+    <h3 class="text-2xl font-bold mb-8 text-white text-center md:text-left">
+      Tools Skills
+    </h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Data Engineering Tools -->
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
+        <h4 class="text-white font-medium text-lg mb-3">Data Engineering</h4>
+        <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
+          <li>Talend Real-Time Big Data Studio</li>
+          <li>Big Query</li>
+          <li>Impala</li>
+          <li>MySQL</li>
+          <li>Talend Data Catalog</li>
+          <li>PostgreSQL</li>
+          <li>DBeaver</li>
+          <li>Microsoft Excel</li>
+        </ul>
+      </div>
+
+      <!-- Web Developer Tools -->
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
+        <h4 class="text-lg font-semibold text-white mb-3">Web Developer</h4>
+        <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
+          <li>HTML, CSS, JavaScript, Tailwind CSS</li>
+          <li>PHP dengan arsitektur modular dan mudah dipelihara</li>
+          <li>MySQL / PostgreSQL database management</li>
+          <li>CRUD systems & backend integration</li>
+          <li>Git & GitHub version control</li>
+          <li>Visual Studio Code, VS Code Extensions (Prettier, Tailwind IntelliSense)</li>
+        </ul>
+      </div>
+
+      <!-- UI/UX Design Tools -->
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
+        <h4 class="text-lg font-semibold text-white mb-3">UI/UX Design</h4>
+        <ul class="text-gray-400 text-sm space-y-3 list-disc list-outside pl-5 leading-relaxed">
+          <li>Figma for wireframing & prototyping</li>
+          <li>Canva for visual asset creation</li>
+          <li>Adobe Illustrator for UI design</li>
+          <li>User research & usability testing</li>
+          <li>Creating user flows, wireframes, and information architecture</li>
+          <li>Design systems & component libraries</li>
+          <li>Interactive prototyping (Figma)</li>
+          <li>Accessibility & responsive design testing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
         
         <section id="projects-section" class="content-section hidden">
           <div
@@ -379,6 +322,7 @@
     </script>
   </body>
 </html>
+
 
 
 
