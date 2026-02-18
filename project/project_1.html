@@ -161,32 +161,25 @@
             to ensure efficiency and scalability.
           </p>
 
-          <!-- Data Transformation -->
-          <p class="mt-6 text-emerald-400 font-medium">Data Transformation</p>
-          <ul class="list-disc ml-6 mt-2">
-            <li>Applying business rules and data enrichment</li>
-            <li>Calculating derived metrics and KPIs</li>
-            <li>Standardizing categorical values and formats</li>
-            <li>Handling nulls, missing values, and inconsistencies</li>
-          </ul>
+          
+          <!-- Validation & Quality Checks -->
+<p class="mt-6 text-emerald-400 font-medium">Validation & Quality Checks</p>
+<ul class="list-disc ml-6 mt-2 text-gray-300">
+  <li>Ensure referential integrity between related datasets</li>
+  <li>Maintain consistency with Bronze Layer source data</li>
+  <li>Set up automated alerts for anomalies or unexpected values</li>
+  <li>Monitor performance to optimize query efficiency</li>
+</ul>
 
-          <!-- Data Validation -->
-          <p class="mt-6 text-emerald-400 font-medium">Validation & Quality Checks</p>
-          <ul class="list-disc ml-6 mt-2">
-            <li>Checking referential integrity between related datasets</li>
-            <li>Ensuring consistency with Bronze Layer source data</li>
-            <li>Automated alerts for anomalies or unexpected values</li>
-            <li>Performance checks for query efficiency</li>
-          </ul>
+<!-- Loading into Silver Tables -->
+<p class="mt-6 text-emerald-400 font-medium">Loading into Silver Tables</p>
+<ul class="list-disc ml-6 mt-2 text-gray-300">
+  <li>Load cleaned and transformed data into BigQuery Silver Tables</li>
+  <li>Partition tables by date or timestamp for query optimization</li>
+  <li>Cluster tables on frequently accessed columns</li>
+  <li>Apply incremental and full-load strategies depending on dataset characteristics</li>
+</ul>
 
-          <!-- Loading to Silver Tables -->
-          <p class="mt-6 text-emerald-400 font-medium">Loading into Silver Tables</p>
-          <ul class="list-disc ml-6 mt-2">
-            <li>BigQuery Silver Tables for cleaned and transformed data</li>
-            <li>Partitioning by date or timestamp for query optimization</li>
-            <li>Clustering on frequently accessed columns</li>
-            <li>Incremental and full-load strategies depending on dataset</li>
-          </ul>
 
           <p class="mt-4">
             The Silver Layer ensures that data is <strong>accurate, consistent, and enriched</strong>, ready for downstream analytics, dashboards, and reporting in the Gold Layer.
@@ -197,5 +190,6 @@
     </main>
   </body>
 </html>
+
 
 
