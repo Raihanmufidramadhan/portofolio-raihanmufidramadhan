@@ -27,34 +27,38 @@
 
   <body class="bg-gray-900 text-gray-100">
     <main class="p-6 md:p-10 max-w-5xl mx-auto">
+
       <!-- Title -->
-      <h1 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-center mb-6">
         <span class="text-emerald-400">Data Warehouse Migration</span>
       </h1>
 
+      <!-- Overview Image -->
+      <div class="w-full flex justify-center mb-12">
+        <img
+          src="../gambar/gambar_11.png"
+          alt="Data Warehouse Migration Overview"
+          class="rounded-xl shadow-lg w-full max-w-4xl"
+        />
+      </div>
+
       <!-- Project Overview -->
-      <section class="space-y-6 leading-relaxed text-gray-300">
+      <section class="space-y-6 leading-relaxed text-gray-300 mb-10">
         <p>
           In this project, I was fully responsible for designing, developing,
           and operating an end-to-end ETL (Extract, Transform, Load) pipeline
           that ingests data from multiple operational systems into a
-          BigQuery-based data warehouse. The primary challenge was ensuring that
-          data originating from various heterogeneous sources could be
+          BigQuery-based data warehouse. The primary challenge was ensuring
+          that data originating from various heterogeneous sources could be
           standardized, validated, and prepared for analytical use without
-          compromising system performance, data consistency, or overall
-          integrity.
+          compromising system performance, data consistency, or overall integrity.
         </p>
 
         <p>
           This initiative was part of a broader organizational effort to
           modernize the data ecosystem by improving data quality, reducing
           architectural complexity, and delivering clean, analysis-ready
-          datasets for business intelligence dashboards, operational reporting,
-          and analytical workloads. Through this modernization, the organization
-          achieved better data accessibility, enhanced scalability, and improved
-          cost efficiency, while establishing a reliable and future-ready
-          infrastructure capable of supporting enterprise-level analytics and
-          long-term data management needs.
+          datasets for business intelligence dashboards.
         </p>
       </section>
 
@@ -64,113 +68,92 @@
           My Roles & Responsibilities
         </h2>
 
-        <!-- Flowchart Image -->
-        <div class="w-full flex justify-center mb-10">
-          <img
-            src="../gambar/gambar_11.png"
-            alt="Data Warehouse Migration Flowchart"
-            class="rounded-xl shadow-lg w-full max-w-4xl"
-          />
+        <!-- Bronze Layer -->
+        <div class="bg-gray-800 shadow-xl rounded-2xl border border-gray-700 p-6 mb-10">
+          <h3 class="font-semibold text-white mb-3">
+            1. Bronze Layer (Raw Data Ingestion & Standardization)
+          </h3>
+
+          <!-- Bronze Layer Description -->
+          <p>
+            I extracted raw data from various operational sources such as
+            <span class="text-emerald-400 font-medium">CSV and DB2</span>. At
+            this stage, my focus was ensuring that all incoming data entered
+            the system in a stable, complete, and structurally aligned manner.
+            I used
+            <span class="text-white font-semibold">
+              Talend Real-Time Big Data Platform and Google Cloud Storage/BigQuery
+            </span>
+            to support and streamline the ETL workflow.
+          </p>
+
+          <!-- Data Extraction -->
+          <p class="mt-4 text-emerald-400 font-medium">Data Extraction</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Relational databases (MySQL, PostgreSQL, internal systems)</li>
+            <li>CSV files with varying sizes (small to large datasets)</li>
+            <li>Periodically generated exports from internal applications</li>
+          </ul>
+          <p class="mt-2">
+            The extraction workflow supported both incremental and full data
+            loads depending on dataset characteristics.
+          </p>
+
+          <!-- Schema Alignment -->
+          <p class="mt-6 text-emerald-400 font-medium">Schema & Data Type Alignment</p>
+          <p>
+            Before loading the data into GCS or BigQuery, I performed schema
+            alignment processes such as:
+          </p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Standardizing column names</li>
+            <li>Converting data types (string → int64, float → numeric, text → timestamp)</li>
+            <li>Normalizing inconsistent formats</li>
+            <li>Fixing encoding issues</li>
+            <li>Standardizing delimiters and field lengths</li>
+          </ul>
+          <p class="mt-2">
+            These steps prevented schema conflicts and reduced transformation errors in the Silver Layer.
+          </p>
+
+          <!-- Validation -->
+          <p class="mt-6 text-emerald-400 font-medium">Structural & Integrity Validation</p>
+          <p>I implemented automated validation steps including:</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Column count validation</li>
+            <li>Data type verification</li>
+            <li>Missing/null checks for critical columns</li>
+            <li>Duplicate detection</li>
+            <li>Timestamp consistency checks</li>
+            <li>Basic referential validation between related datasets</li>
+          </ul>
+          <p class="mt-2">
+            When anomalies were detected, the pipeline automatically generated notifications.
+          </p>
+
+          <!-- Loading -->
+          <p class="mt-6 text-emerald-400 font-medium">Loading into GCS & BigQuery</p>
+          <p>After validation, data was loaded into:</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Google Cloud Storage (GCS) as raw staging files</li>
+            <li>BigQuery Bronze Tables</li>
+          </ul>
+          <p class="mt-3">Loading strategy included:</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Append mode</li>
+            <li>Replace mode</li>
+            <li>Partitioning by date or timestamp</li>
+            <li>Clustering on frequently queried columns</li>
+          </ul>
+          <p class="mt-2">
+            The Bronze Layer ensures stable, structured datasets ready for downstream processing in the Silver Layer.
+          </p>
         </div>
-        <div class="space-y-10 text-gray-300 leading-relaxed">
-          <!-- Bronze Layer -->
-          <div>
-            <h3 class="font-semibold text-white mb-3">
-              1. Data Ingestion, Pre-processing & Standardization – Bronze Layer
-              (RAW)
-            </h3>
 
-            <p>
-              I extracted raw data from various operational sources such as
-              <span class="text-emerald-400 font-medium">CSV and DB2</span>. At
-              this stage, my focus was ensuring that all incoming data entered
-              the system in a stable, complete, and structurally aligned manner.
-              I used
-              <span class="text-white font-semibold"
-                >Talend Real-Time Big Data Platform and Google Cloud
-                Storage/BigQuery</span
-              >
-              to support and streamline the ETL workflow.
-            </p>
-
-            <!-- Data Extraction -->
-            <p class="mt-4 text-emerald-400 font-medium">Data Extraction</p>
-            <ul class="list-disc ml-6 mt-2">
-              <li>
-                Relational databases (MySQL, PostgreSQL, internal systems)
-              </li>
-              <li>CSV files with varying sizes (small to large datasets)</li>
-              <li>Periodically generated exports from internal applications</li>
-            </ul>
-            <p class="mt-2">
-              The extraction workflow supported both incremental and full data
-              loads depending on dataset characteristics.
-            </p>
-
-            <!-- Schema Alignment -->
-            <p class="mt-6 text-emerald-400 font-medium">
-              Schema & Data Type Alignment
-            </p>
-            <p>
-              Before loading the data into GCS or BigQuery, I performed schema
-              alignment processes such as:
-            </p>
-            <ul class="list-disc ml-6 mt-2">
-              <li>Standardizing column names</li>
-              <li>
-                Converting data types (string → int64, float → numeric, text →
-                timestamp)
-              </li>
-              <li>Normalizing inconsistent formats</li>
-              <li>Fixing encoding issues</li>
-              <li>Standardizing delimiters and field lengths</li>
-            </ul>
-            <p class="mt-2">
-              These steps prevented schema conflicts and reduced transformation
-              errors in the Silver Layer.
-            </p>
-
-            <!-- Validation -->
-            <p class="mt-6 text-emerald-400 font-medium">
-              Structural & Integrity Validation
-            </p>
-            <p>I implemented automated validation steps including:</p>
-            <ul class="list-disc ml-6 mt-2">
-              <li>Column count validation</li>
-              <li>Data type verification</li>
-              <li>Missing/null checks for critical columns</li>
-              <li>Duplicate detection</li>
-              <li>Timestamp consistency checks</li>
-              <li>Basic referential validation between related datasets</li>
-            </ul>
-            <p class="mt-2">
-              When anomalies were detected, the pipeline automatically generated
-              notifications.
-            </p>
-
-            <!-- Loading -->
-            <p class="mt-6 text-emerald-400 font-medium">
-              Loading into GCS & BigQuery
-            </p>
-            <p>After validation, data was loaded into:</p>
-            <ul class="list-disc ml-6 mt-2">
-              <li>Google Cloud Storage (GCS) as raw staging files</li>
-              <li>BigQuery Bronze Tables</li>
-            </ul>
-
-            <p class="mt-3">Loading strategy included:</p>
-            <ul class="list-disc ml-6 mt-2">
-              <li>Append mode</li>
-              <li>Replace mode</li>
-              <li>Partitioning by date or timestamp</li>
-              <li>Clustering on frequently queried columns</li>
-            </ul>
-
-            <p class="mt-2">
-              The Bronze Layer ensures stable, structured datasets ready for
-              downstream processing in the Silver Layer.
-            </p>
-          </div>
+    </section>
+  </main>
+</body>
+</html>
 
           <!-- Silver Layer -->
           <div>
@@ -248,3 +231,4 @@
     </main>
   </body>
 </html>
+
